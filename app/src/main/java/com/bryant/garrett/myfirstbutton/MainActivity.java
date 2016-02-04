@@ -22,14 +22,12 @@ public class MainActivity extends AppCompatActivity {
 
         Button mButton = (Button) findViewById(R.id.new_button);
 
-        class MyListener implements View.OnClickListener {
+        mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Make A Toast!", Toast.LENGTH_SHORT).show();
             }
-        }
-
-        mButton.setOnClickListener(new MyListener());
+        });
     }
 
     @Override
