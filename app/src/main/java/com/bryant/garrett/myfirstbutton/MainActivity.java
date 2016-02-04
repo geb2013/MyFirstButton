@@ -21,17 +21,12 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // The greeting text displayed above the button	must be stored as a string resource.
-        String greetingString = "Press Button";
-        TextView mGreeting = (TextView) findViewById(R.id.greeting_message);
-        mGreeting.setText(greetingString);
-
         // The button event handler must be implemented using an anonymous class.
         Button mButton = (Button) findViewById(R.id.new_button);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Make A Toast!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, R.string.greeting_message, Toast.LENGTH_SHORT).show();
             }
         });
     }
