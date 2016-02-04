@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,8 +21,13 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button mButton = (Button) findViewById(R.id.new_button);
+        // The greeting text displayed above the button	must be stored as a string resource.
+        String greetingString = "Press Button";
+        TextView mGreeting = (TextView) findViewById(R.id.greeting_message);
+        mGreeting.setText(greetingString);
 
+        // The button event handler must be implemented using an anonymous class.
+        Button mButton = (Button) findViewById(R.id.new_button);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
